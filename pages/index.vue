@@ -72,15 +72,6 @@
           <slider :items="slides"/>
         </div>
       </section>
-      <section id="how" class="flex flex-col items-center  w-full"
-               :class="{'mt-[40px]' : !isMobile, 'mt-[20px]' :isMobile}">
-        <div :class="{'3xl:w-[1700px] sm:w-[98vw]' : !isMobile, 'w-[345px]' :isMobile}">
-          <section-title :title="'Как добраться'" :subtitle="'Как добраться'" :type="'left'"/>
-        </div>
-        <div class="mt-[40px] w-full">
-          <map-item/>
-        </div>
-      </section>
     </div>
   </div>
 </template>

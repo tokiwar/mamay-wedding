@@ -51,9 +51,7 @@ export default {
     }
   }),
   mounted() {
-    this.$bus.$on("mapCreated", () => {
-      this.open();
-    });
+    this.open();
   },
   methods: {
     open() {
