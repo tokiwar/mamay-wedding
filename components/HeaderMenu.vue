@@ -3,7 +3,7 @@
       :class="{'h-[120px] space-x-[5vw]' : !$device.isMobile, 'h-[60px]' : $device.isMobile}"
       class="w-full bg-[#EBECE8] font-['University'] flex flex-row justify-center items-center fixed z-20">
     <div>
-      <img :class="{'h-[100px]' :!$device.isMobile, 'h-[60px]' : $device.isMobile}" src="@/assets/img/logo-3.png"/>
+      <img :class="{'h-[100px]' :!$device.isMobile, 'h-[60px]' : $device.isMobile}" src="@/assets/img/logo.png"/>
     </div>
     <menu-top/>
   </header>

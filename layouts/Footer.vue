@@ -1,9 +1,10 @@
 <template>
   <footer id="contacts"
           class="flex relative flex-col w-full bg-[#6F8079] font-['University'] text-white items-center justify-center">
-    <section class="flex flex-col relative"
+    <img v-if="!$device.isMobile" class="absolute top-0 right-0 sm:h-[20vw] 3xl:h-[12vw]" src="@/assets/img/top-flower.png"/>
+    <img v-if="!$device.isMobile" class="absolute bottom-0 left-0 sm:h-[25vw] 3xl:h-[17vw]" src="@/assets/img/bottom-flower.png"/>
+    <section class="flex flex-col relative py-[1vw]"
              :class="{'w-[60vw] sm:space-y-[3vw] h-full' : !$device.isMobile, 'py-[22px] space-y-[22px]' : $device.isMobile}">
-      <img src="@/assets/img/footer.png" v-if="!$device.isMobile" class="absolute w-full object-contain"/>
       <div
           :class="{'w-[90%] items-start self-start 2xl:space-y-[25px] sm:space-y-[1vw]' : !$device.isMobile, 'w-[350px] space-y-[15px]' : $device.isMobile}"
           class="flex flex-col">

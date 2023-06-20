@@ -28,7 +28,7 @@
         class="relative">
       <image-card :height="$device.isMobile? 276 :465" :width="$device.isMobile? 229 : 415"
                   :position="$device.isMobile ? 'left-bottom-mobile' :'left-bottom'"
-                  :image="useAsset('img/photo1.png')"/>
+                  :image="useAsset('img/history/main.png')"/>
       <div v-if="$device.isMobile" class="text-[20px] leading-[20px]">С любовью, Сергей и Кристина</div>
     </div>
   </div>

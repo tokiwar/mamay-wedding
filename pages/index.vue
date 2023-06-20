@@ -46,13 +46,13 @@
                id="program" class="flex flex-col">
         <section-title :title="'Программа'" :subtitle="'Программа'" :type="'left'"/>
         <program-card :height="!!isMobile ? 289 : 401" :width="!!isMobile ? 334 : 559" :list="registerList"
-                      :image="useAsset('img/photo2.png')"
+                      :image="useAsset('img/program/start.png')"
                       :title="'Регистрация'"
                       :title-position="'right'"
                       :position="!!isMobile ? 'right-bottom-mobile' : 'right-bottom'" :type="'left'"
                       :class="{'mt-[40px]' : !isMobile, 'mt-[20px]' :isMobile}"/>
         <program-card :height="!!isMobile ? 289 : 401" :width="!!isMobile ? 334 : 559" :list="banquetList"
-                      :image="useAsset('img/photo3.png')"
+                      :image="useAsset('img/program/finish.png')"
                       :title="'Банкет'"
                       :title-position="'left'"
                       :position="!!isMobile ? 'left-bottom-mobile' : 'left-bottom'" :type="'right'"
