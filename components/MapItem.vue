@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <YandexMap
-        :class="{'h-[700px]' : $device.isDesktop, 'h-[350px]' : !$device.isDesktop}"
+        :class="{'h-[700px]' : !$device.isMobile, 'h-[350px]' : $device.isMobile}"
         :coordinates="coordinates"
         :detailed-controls="detailedControls"
         :controls="controls"

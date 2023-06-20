@@ -1,7 +1,7 @@
 <template>
   <div v-if="isOpen" class="fixed w-full h-full bg-black-rgba top-0 z-40 left-0 flex items-center justify-center"
        @click.self="close">
-    <div :class="{'h-[90vh] w-[63vh]' : $device.isDesktop,'h-[85vh] w-[58vh]' : !$device.isDesktop}"
+    <div :class="{'h-[90vh] w-[63vh]' : !$device.isMobile,'h-[85vh] w-[58vh]' : $device.isMobile}"
          class="bg-white flex relative">
       <button class="absolute right-[3vh] top-[3vh] z-20 close-button h-[2vh] w-[2vh]" @click.prevent="close"></button>
       <img class="object-cover z-10" src="@/assets/img/flowers.png"/>

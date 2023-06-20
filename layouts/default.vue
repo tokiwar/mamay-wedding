@@ -2,7 +2,7 @@
   <div class="h-screen flex flex-col items-center select-none">
     <Header/>
     <div v-if="store.$state.menuOpened" class="fixed h-full w-full z-30 bg-black opacity-90"></div>
-    <NuxtPage :class="{'mt-[120px]' : $device.isDesktop, 'mt-[59px]' : !$device.isDesktop}"/>
+    <NuxtPage :class="{'mt-[120px]' : !$device.isMobile, 'mt-[59px]' : $device.isMobile}"/>
     <Footer/>
   </div>
 </template>

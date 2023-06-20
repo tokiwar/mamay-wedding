@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col sm:max-xl:h-[25vw] 2xl:w-[705px] sm:w-[40vw] justify-between"
-       v-if="$device.isDesktop">
+       v-if="!$device.isMobile">
     <div class="flex flex-col 2xl:h-[74px] sm:h-[4vw] justify-between">
       <span class="2xl:text-[44px] 2xl:leading-[44px] sm:text-[3vw] sm:leading-[3vw] uppercase">{{ title }}</span>
       <span class="3xl:w-[705px] sm:w-[40vw] h-0 border-[1px] border-solid border-[#6F8079]"></span>

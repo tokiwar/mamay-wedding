@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row space-x-[4.5vw] uppercase 2xl:text-[30px] sm:text-[2vw]" v-if="$device.isDesktop">
+  <div class="flex flex-row space-x-[4.5vw] uppercase 2xl:text-[30px] sm:text-[2vw]" v-if="!$device.isMobile">
     <nuxt-link class="hover:underline decoration-[#6F8079]" v-for="item in menu" :key="item.key" :to="{path:item.link, hash:item.hash}">
       {{ item.text }}
     </nuxt-link>
