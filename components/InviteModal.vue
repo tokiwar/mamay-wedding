@@ -16,7 +16,7 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col h-[60%] space-y-[2vh] font-['University']">
+        <div class="flex flex-col h-[63%] space-y-[2vh] font-['University']">
           <span class="text-[4vh] leading-[4vh]">{{ names[code] || names['default'] }}</span>
           <div class="flex flex-col space-y-[2vh] text-[2.8vh] leading-[2.8vh]">
             <span>Мы решили стать одной семьей и будем стаслитвы, <br> если вы украсите наше счастилвое торжество <br> своим присутствием! Разделите с нами радость <br> самого красочного дня в жизни влюбленных!</span>
