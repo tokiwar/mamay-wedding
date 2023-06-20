@@ -1,6 +1,7 @@
 <template>
   <div class="flex flex-row space-x-[4.5vw] uppercase 2xl:text-[30px] sm:text-[2vw]" v-if="!$device.isMobile">
-    <nuxt-link class="hover:underline decoration-[#6F8079]" v-for="item in menu" :key="item.key" :to="{path:item.link, hash:item.hash}">
+    <nuxt-link class="hover:underline decoration-[#6F8079]" v-for="item in menu" :key="item.key"
+               :to="{path:item.link, hash:item.hash}">
       {{ item.text }}
     </nuxt-link>
   </div>
@@ -15,7 +16,7 @@
       <div class="flex w-full absolute flex-col text-center text-[25px] leading-[25px] justify-between bg-[#CFD4D2]"
            v-if="opened">
         <span class="relative w-full h-[60px] flex items-center justify-center" v-for="item in menu" :key="item.key">
-          <nuxt-link class="" :to="{path:item.link, hash:item.hash}">
+          <nuxt-link class="" :to="{path:item.link, hash:item.hash}" @click="close">
             {{ item.text }}
           </nuxt-link>
           <span :class="{'left-0' : item.type === 'left', 'right-0' : item.type === 'right'}"
@@ -26,10 +27,12 @@
   </div>
 </template>
 <script type="ts">
+import {useMainStore} from "~/store";
 export default {
   name: 'MenuTop',
   data: () => ({
     opened: false,
+    store: useMainStore(),
     menu: [
       {key: 0, text: 'Love story', link: '/', hash: '#love-story', type: 'left'},
       {key: 1, text: 'Программа', link: '/', hash: '#program', type: 'right'},
@@ -41,6 +44,11 @@ export default {
   methods: {
     close() {
       this.opened = !this.opened;
+      if (this.opened) {
+        this.store.toggleOverflowOn();
+      } else {
+        this.store.toggleOverflowOff();
+      }
     }
   }
 }

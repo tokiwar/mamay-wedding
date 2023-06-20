@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="flex flex-col h-[60%] space-y-[2vh] font-['University']">
-          <span class="text-[4vh] leading-[4vh]">Дорогие гости!</span>
+          <span class="text-[4vh] leading-[4vh]">{{ names[code] || names['default'] }}</span>
           <div class="flex flex-col space-y-[2vh] text-[2.8vh] leading-[2.8vh]">
             <span>Мы решили стать одной семьей и будем стаслитвы, <br> если вы украсите наше счастилвое торжество <br> своим присутствием! Разделите с нами радость <br> самого красочного дня в жизни влюбленных!</span>
             <span>Торжественная церемония бракосочетания<br>состоится в Большом зале Екатериненского ЗАГСа<br>г. Краснодар, ул. Офицерская, 47<br>в 10:00</span>
@@ -39,7 +39,16 @@ export default {
   name: 'InviteModal',
   data: () => ({
     isOpen: false,
-    store: useMainStore()
+    store: useMainStore(),
+    code: 'default',
+    names: {
+      tarbeevy: 'Валюша и Василий!',
+      sysoevy: 'Вячеслав и Виктория!',
+      grabelnikovy: 'Жанна и Александр!',
+      kiselevy: 'Никита и Даша!',
+      shkill: 'Костя и Наташа!',
+      default: 'Дорогие гости!'
+    }
   }),
   mounted() {
     this.$bus.$on("mapCreated", () => {
@@ -59,10 +68,12 @@ export default {
         this.store.closeMenu();
         this.store.toggleOverflowOff();
         this.isOpen = false;
+        this.$router.replace('/');
       }
     },
     checkModalParam() {
       const queryParam = this.$route.query.invite;
+      this.code = queryParam;
       return !!queryParam;
     },
   },

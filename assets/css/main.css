@@ -1,3 +1,9 @@
 .hamburger {
     -webkit-tap-highlight-color: transparent;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
+}
