@@ -52,10 +52,13 @@ export default {
   }),
   mounted() {
     this.open();
+    this.$bus.$on("openModal", () => {
+      this.open(true);
+    });
   },
   methods: {
-    open() {
-      if (this.checkModalParam()) {
+    open(skip = false) {
+      if (skip|| this.checkModalParam()) {
         this.store.openMenu();
         this.store.toggleOverflowOn();
         this.isOpen = true;
