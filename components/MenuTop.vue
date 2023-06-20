@@ -14,8 +14,9 @@
         </span>
     </button>
     <transition name="fade">
-      <div class="flex w-full mt-[-3px] absolute flex-col text-center text-[25px] leading-[25px] justify-between bg-[#CFD4D2]"
-           v-if="opened">
+      <div
+          class="flex w-full mt-[-3px] absolute flex-col text-center text-[25px] leading-[25px] justify-between bg-[#CFD4D2]"
+          v-if="opened">
         <span class="relative w-full h-[60px] flex items-center justify-center" v-for="item in menu" :key="item.key">
           <nuxt-link class="" :to="{path:item.link, hash:item.hash, query:item.query}" @click="checkAction(item)">
             {{ item.text }}
@@ -48,7 +49,9 @@ export default {
       this.close();
       if (item.action) {
         this.$bus.$emit(item.action);
-        this.store.toggleOverflowOn();
+        if (!this.$device.isDesktop) {
+          this.store.toggleOverflowOn();
+        }
       }
     },
     close() {
