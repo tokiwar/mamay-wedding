@@ -115,7 +115,7 @@ const slides = useState('slides', () => {
     {key: 2, 'src': useAsset('img/slider/3.jpg')},
     {key: 3, 'src': useAsset('img/slider/4.jpg')},
     {key: 4, 'src': useAsset('img/slider/5.jpg')},
-    {key: 5, 'src': useAsset('img/slider/6.jpg')},
+   // {key: 5, 'src': useAsset('img/slider/6.jpg')},
     {key: 6, 'src': useAsset('img/slider/7.jpg')},
     {key: 7, 'src': useAsset('img/slider/8.jpg')},
     {key: 8, 'src': useAsset('img/slider/9.jpg')},
@@ -123,7 +123,7 @@ const slides = useState('slides', () => {
     {key: 10, 'src': useAsset('img/slider/11.jpg')},
     {key: 11, 'src': useAsset('img/slider/12.jpg')},
     {key: 12, 'src': useAsset('img/slider/13.jpg')},
-    {key: 13, 'src': useAsset('img/slider/11.jpg')},
+   // {key: 13, 'src': useAsset('img/slider/11.jpg')},
   ];
 });
 const registerList = useState('registerList', () => {

@@ -18,7 +18,9 @@
         </div>
         <div class="flex flex-col h-[63%] space-y-[2vh] font-['University']">
           <span class="text-[4vh] leading-[4vh]">{{ names[code] || names['default'] }}</span>
-          <div class="flex flex-col space-y-[2vh] text-[2.8vh] leading-[2.8vh]">
+          <div
+              :class="{'text-[2.8vh] leading-[2.8vh]' : !$device.isMobile, 'text-[2.5vh] leading-[2.5vh]' : $device.isMobile}"
+              class="flex flex-col space-y-[2vh]">
             <span>Мы решили стать одной семьей и будем стаслитвы, <br> если вы украсите наше счастилвое торжество <br> своим присутствием! Разделите с нами радость <br> самого красочного дня в жизни влюбленных!</span>
             <span>Торжественная церемония бракосочетания<br>состоится в Большом зале Екатериненского ЗАГСа<br>г. Краснодар, ул. Офицерская, 47<br>в 10:00</span>
             <span>Праздник продолжится в ресторане "Mer Hall"<br>г. Краснодар, ул. Индустриальная, 45<br>Ждем вас к 17:00</span>
@@ -58,7 +60,7 @@ export default {
   },
   methods: {
     open(skip = false) {
-      if (skip|| this.checkModalParam()) {
+      if (skip || this.checkModalParam()) {
         this.store.openMenu();
         this.store.toggleOverflowOn();
         this.isOpen = true;
