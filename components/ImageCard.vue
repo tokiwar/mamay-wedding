@@ -2,7 +2,7 @@
   <div class="relative">
     <div :class="dynamicClass"
          class="absolute border-solid border-[#6F8079]"></div>
-    <img :class="sizeClass" class="relative z-10 object-cover" :src="image"/>
+    <img :class="sizeClass" class="relative z-10 object-cover" :src="image" alt="фото" title="фото"/>
   </div>
 </template>
 <script>

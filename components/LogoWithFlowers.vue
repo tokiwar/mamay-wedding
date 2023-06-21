@@ -11,6 +11,7 @@
   </div>
   <div v-if="!$device.isMobile" class="absolute  2xl:h-[680px]  sm:h-[40vw] sm:w-[98vw]">
     <img class="relative 3xl:mr-[10vw] 2xl:ml-auto 2xl:mr-[3vw] 2xl:h-[720px] sm:h-[45vw] sm:mr-0 sm:ml-auto"
+         alt="лого" title="лого"
          src="~/assets/img/logo-flower.png"/>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div
-      :class="{'3xl:h-[20vw] 2xl:flex-row 2xl:justify-center 2xl:space-x-[5vw] sm:flex-col  sm:max-2xl:h-[50vw]': type ==='left' && !$device.isMobile, '3xl:h-[20vw] 2xl:justify-center 2xl:space-x-[5vw] 2xl:space-x-reverse 2xl:flex-row-reverse sm:flex-col sm:max-2xl:h-[50vw]' : type === 'right' && !$device.isMobile, 'flex-col-reverse justify-between' : $device.isMobile}"
+      :class="{'3xl:h-[23vw] 2xl:flex-row 2xl:justify-center 2xl:space-x-[5vw] sm:flex-col  sm:max-2xl:h-[50vw]': type ==='left' && !$device.isMobile, '3xl:h-[23vw] 2xl:justify-center 2xl:space-x-[5vw] 2xl:space-x-reverse 2xl:flex-row-reverse sm:flex-col sm:max-2xl:h-[50vw]' : type === 'right' && !$device.isMobile, 'flex-col-reverse justify-between' : $device.isMobile}"
       class="flex font-['University'] items-center">
     <div class="relative"
          :class="{'sm:h-[25vw] flex items-center' : !$device.isMobile, 'h-[301px]' : $device.isMobile}">

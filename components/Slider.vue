@@ -22,7 +22,7 @@
       }"
   >
     <SwiperSlide v-for="item in items" :key="item.key">
-      <img :src="item.src" class="w-full h-full object-cover"/>
+      <img alt="слайд" title="слайд" :src="item.src" class="w-full h-full object-cover"/>
     </SwiperSlide>
   </Swiper>
 </template>

@@ -4,7 +4,7 @@
     <div :class="{'h-[90vh] w-[63vh]' : !$device.isMobile,'h-[85vh] w-[58vh]' : $device.isMobile}"
          class="bg-white flex relative">
       <button class="absolute right-[3vh] top-[3vh] z-20 close-button h-[2vh] w-[2vh]" @click.prevent="close"></button>
-      <img class="object-cover z-10" src="@/assets/img/invite-flower.png"/>
+      <img class="object-cover z-10" src="@/assets/img/invite-flower.png" alt="фон" title="фон"/>
       <div class="absolute w-full h-full flex flex-col justify-between items-center">
         <div class="w-full h-[25%] flex flex-col items-end pt-[10vh] pr-[10vh]">
           <div class="flex h-full flex-col items-center justify-between">

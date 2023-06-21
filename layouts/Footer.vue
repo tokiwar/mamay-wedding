@@ -1,8 +1,8 @@
 <template>
   <footer id="contacts"
           class="flex relative flex-col w-full bg-[#6F8079] font-['University'] text-white items-center justify-center">
-    <img v-if="!$device.isMobile" class="absolute top-0 right-0 sm:h-[20vw] 3xl:h-[12vw]" src="@/assets/img/top-flower.png"/>
-    <img v-if="!$device.isMobile" class="absolute bottom-0 left-0 sm:h-[25vw] 3xl:h-[17vw]" src="@/assets/img/bottom-flower.png"/>
+    <img alt="top-flower" title="top-flower" v-if="!$device.isMobile" class="absolute top-0 right-0 sm:h-[20vw] 3xl:h-[12vw]" src="@/assets/img/top-flower.png"/>
+    <img alt="bottom-flower" title="bottom-flower" v-if="!$device.isMobile" class="absolute bottom-0 left-0 sm:h-[25vw] 3xl:h-[17vw]" src="@/assets/img/bottom-flower.png"/>
     <section class="flex flex-col relative py-[1vw]"
              :class="{'w-[60vw] sm:space-y-[3vw] h-full' : !$device.isMobile, 'py-[22px] space-y-[22px]' : $device.isMobile}">
       <div
