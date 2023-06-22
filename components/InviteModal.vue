@@ -49,6 +49,7 @@ export default {
       grabelnikovy: 'Жанна и Александр!',
       kiselevy: 'Никита и Даша!',
       shkill: 'Костя и Наташа!',
+      krasnye: 'Ирина, Игорь и Арсений',
       default: 'Дорогие гости!'
     }
   }),
