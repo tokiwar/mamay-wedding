@@ -50,6 +50,9 @@ export default {
       kiselevy: 'Никита и Даша!',
       shkill: 'Костя и Наташа!',
       krasnye: 'Ирина, Игорь и Арсений',
+      tsipurinda: 'Артём и Наташа',
+      beresovskie: 'Татьяна и Андрей',
+      kandaurovi: 'Алексей и Ольга',
       default: 'Дорогие гости!'
     }
   }),
