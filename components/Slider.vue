@@ -1,7 +1,7 @@
 <template>
   <Swiper
       :modules="[SwiperAutoplay, SwiperFreeMode]"
-      :slides-per-view="'auto'"
+      :slides-per-view="!$device.isMobile ? 'auto' : '1'"
       :loop="true"
       :class="'h-[375px]'"
       :autoplay="{
