@@ -24,7 +24,7 @@ export default {
     }
   }),
   created() {
-    this.sizeClass = `2xl:h-[${this.height}px] 2xl:w-[${this.width}px] sm:w-[25vw] sm:h-[100%]`;
+    this.sizeClass = `2xl:h-[${this.height}px] 2xl:w-[${this.width}px] sm:w-[27vw] sm:h-[100%]`;
     this.dynamicClass = this.positionObject[this.position] + ' ' + this.sizeClass;
     this.dynamicClass += this.$device.isMobile ? ' border-[2px] ' : ' border-[3px] ';
   }

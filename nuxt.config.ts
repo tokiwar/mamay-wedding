@@ -20,6 +20,8 @@ export default defineNuxtConfig({
                         }
                     },
                     safelist: [
+                        'sm:w-[27vw]',
+                        'sm:h-[100%]',
                         '3xl:h-[401px]',
                         '2xl:h-[401px]',
                         'xl:h-[401px]',
