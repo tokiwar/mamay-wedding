@@ -19,7 +19,7 @@
 export default {
   name: 'WeddingTimer',
   data: () => ({
-    date: '2023-09-27T17:00:00',
+    date: '2023-07-29T17:00:00',
     secondsLeft: 0,
   }),
   created() {
