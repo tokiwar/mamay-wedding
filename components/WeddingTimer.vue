@@ -6,12 +6,9 @@
         :class="{'2xl:text-[44px] 2xl:leading-[44px] sm:text-[3vw] sm:leading-[3vw]' : !$device.isMobile, 'text-[20px] leading-[16px]' : $device.isMobile}">До нашего праздника осталось:</span>
     <div class="relative h-[205px] flex flex-row justify-end items-end">
       <span
-          :class="{'2xl:text-[190px] 2xl:leading-[160px] sm:text-[13vw] sm:leading-[8vw]' : !$device.isMobile, 'text-[50px] leading-[30px]' : $device.isMobile}">{{
-          secondsLeft
-        }}</span>
-      <span
-          class="ml-[4px]"
-          :class="{'2xl:text-[44px] 2xl:leading-[75px] sm:text-[3vw] sm:leading-[3vw]' : !$device.isMobile, 'text-[20px] leading-[16px]' : $device.isMobile}">секунд</span>
+          :class="{'2xl:text-[190px] 2xl:leading-[160px] sm:text-[13vw] sm:leading-[8vw]' : !$device.isMobile, 'text-[50px] leading-[30px]' : $device.isMobile}">
+        Готово
+      </span>
     </div>
   </div>
 </template>
