@@ -1,5 +1,6 @@
 <template>
   <div class="bg-[#F5F5F5] w-full">
+    <archive-note/>
     <invite-modal/>
     <div class="w-full flex items-center flex-col">
       <div class="w-full bg-[#EBECE8] flex flex-col items-center">

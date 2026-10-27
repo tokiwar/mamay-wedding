@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    app: {
+        baseURL: process.env.NUXT_APP_BASE_URL || '/mamay-wedding/',
+        head: {
+            link: [{rel: 'icon', type: 'image/svg+xml', href: `${process.env.NUXT_APP_BASE_URL || '/mamay-wedding/'}favicon.svg`}],
+            meta: [{name: 'robots', content: 'noindex, follow'}, {name: 'description', content: 'Архив свадебного сайта Сергея и Кристины. 29 июля 2023 года.'}]
+        }
+    },
     // @ts-ignore
-    ssr: true,
+    ssr: false,
     css: ['@/assets/css/main.css', '@/assets/css/fonts.css', '@/assets/css/hamburgers.css'],
     modules: [
         '@pinia/nuxt',

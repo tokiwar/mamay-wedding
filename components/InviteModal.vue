@@ -3,7 +3,7 @@
        @click.self="close">
     <div :class="{'h-[90vh] w-[63vh]' : !$device.isMobile,'h-[85vh] w-[58vh]' : $device.isMobile}"
          class="bg-white flex relative">
-      <button class="absolute right-[3vh] top-[3vh] z-20 close-button h-[2vh] w-[2vh]" @click.prevent="close"></button>
+      <button type="button" aria-label="Закрыть приглашение" class="absolute right-[3vh] top-[3vh] z-20 close-button h-[2vh] w-[2vh]" @click.prevent="close"></button>
       <img class="object-cover z-10" src="@/assets/img/invite-flower.png"/>
       <div class="absolute w-full h-full flex flex-col justify-between items-center">
         <div class="w-full h-[25%] flex flex-col items-end pt-[10vh] pr-[10vh]">
@@ -12,7 +12,7 @@
             <div
                 class="flex flex-col items-center justify-center uppercase font-['University'] text-[2vh] leading-[2vh]">
               <span>29 июля 2023 года</span>
-              <span>день нашей свадьы</span>
+              <span>день нашей свадьбы</span>
             </div>
           </div>
         </div>
@@ -21,8 +21,8 @@
           <div
               :class="{'text-[2.8vh] leading-[2.8vh]' : !$device.isMobile, 'text-[2.5vh] leading-[2.5vh]' : $device.isMobile}"
               class="flex flex-col space-y-[2vh]">
-            <span>Мы решили стать одной семьей и будем стаслитвы, <br> если вы украсите наше счастилвое торжество <br> своим присутствием! Разделите с нами радость <br> самого красочного дня в жизни влюбленных!</span>
-            <span>Торжественная церемония бракосочетания<br>состоится в Большом зале Екатериненского ЗАГСа<br>г. Краснодар, ул. Офицерская, 47<br>в 10:00</span>
+            <span>Мы решили стать одной семьей и будем счастливы, <br> если вы украсите наше счастливое торжество <br> своим присутствием! Разделите с нами радость <br> самого красочного дня в жизни влюбленных!</span>
+            <span>Торжественная церемония бракосочетания<br>состоится в Большом зале Екатерининского ЗАГСа<br>г. Краснодар, ул. Офицерская, 47<br>в 10:00</span>
             <span>Праздник продолжится в ресторане "Mer Hall"<br>г. Краснодар, ул. Индустриальная, 45<br>Ждем вас к 17:00</span>
           </div>
           <span class="text-[3vh] leading-[3vh]">Сергей и Кристина</span>
@@ -71,16 +71,16 @@ export default {
       }
     },
     close() {
-      if (this.checkModalParam()) {
-        this.store.closeMenu();
-        this.store.toggleOverflowOff();
-        this.isOpen = false;
-        this.$router.replace('/');
+      this.store.closeMenu();
+      this.store.toggleOverflowOff();
+      this.isOpen = false;
+      if (this.$route.query.invite) {
+        this.$router.replace(this.$route.path);
       }
     },
     checkModalParam() {
       const queryParam = this.$route.query.invite;
-      this.code = queryParam;
+      this.code = queryParam || 'default';
       return !!queryParam;
     },
   },
